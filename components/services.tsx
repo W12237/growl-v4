@@ -103,15 +103,15 @@ export function Services() {
           return (
             <div
               key={i}
-              className="group flex flex-col h-full border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-out hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(138,63,252,0.25)] hover:-translate-y-2"
+              className="group flex flex-col h-full border border-white/10 rounded-2xl p-8 transition-all duration-300 ease-out hover:border-[#C6FF3A]/50 hover:shadow-[0_0_25px_rgba(198,255,58,0.25)] hover:-translate-y-2"
             >
               <div className="mb-6 flex items-center justify-center h-14 w-14 rounded-full border border-white/10 bg-transparent transition-transform duration-300 group-hover:scale-110">
-                <Icon className="w-7 h-7 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+                <Icon className="w-7 h-7 text-[#C6FF3A] group-hover:text-[#DFFF8A] transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 transition-all duration-300 group-hover:text-purple-300 group-hover:translate-x-1">
+              <h3 className="text-xl font-semibold text-white mb-3 transition-all duration-300 group-hover:text-[#C6FF3A] group-hover:translate-x-1">
                 {service.title}
               </h3>
-              <div className="h-px w-16 bg-white/10 mb-5 transition-all duration-300 group-hover:w-24 group-hover:bg-purple-400/50"></div>
+              <div className="h-px w-16 bg-white/10 mb-5 transition-all duration-300 group-hover:w-24 group-hover:bg-[#C6FF3A]/50"></div>
               <p className="text-sm text-gray-400 leading-relaxed mb-5 transition-all duration-300 group-hover:text-gray-200 group-hover:translate-y-1">
                 {service.description}
               </p>
@@ -119,9 +119,9 @@ export function Services() {
                 {service.keypoints.map((point, j) => (
                   <li
                     key={j}
-                    className="text-sm text-gray-300 flex items-center gap-2 transition-all duration-300 group-hover:text-purple-200"
+                    className="text-sm text-gray-300 flex items-center gap-2 transition-all duration-300 group-hover:text-[#C6FF3A]"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-purple-400/70 transition-all duration-300 group-hover:bg-purple-300"></span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#C6FF3A]/70 transition-all duration-300 group-hover:bg-[#C6FF3A]"></span>
                     {point}
                   </li>
                 ))}
@@ -136,11 +136,11 @@ export function Services() {
         <h3 className="text-4xl font-semibold text-white tracking-tight">
           {language === "ar" ? (
             <>
-              عن <span className="text-[#A855F7]">جرول</span>
+              عن <span className="text-[#C6FF3A]">جرول</span>
             </>
           ) : (
             <>
-              About <span className="text-[#A855F7]">Growl</span>
+              About <span className="text-[#C6FF3A]">Growl</span>
             </>
           )}
         </h3>
@@ -151,22 +151,22 @@ export function Services() {
         </p>
       </div>
 
-      {/* Gradient Cards with same hover animation */}
+      {/* Gradient Cards */}
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {services.slice(4).map((service, i) => {
           const Icon = service.icon
           return (
             <div
               key={i}
-              className="group relative flex flex-col h-full rounded-2xl p-8 border border-white/10 bg-[radial-gradient(120%_120%_at_0%_0%,rgba(168,85,247,0.32),rgba(17,24,39,0.4)_45%,rgba(17,24,39,0.9))] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] transition-all duration-300 ease-out"
+              className="group relative flex flex-col h-full rounded-2xl p-8 border border-white/10 bg-[radial-gradient(120%_120%_at_0%_0%,rgba(198,255,58,0.20),rgba(17,24,39,0.4)_45%,rgba(17,24,39,0.9))] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(198,255,58,0.20)] transition-all duration-300 ease-out"
             >
               <div className="mb-6 flex items-center justify-center h-14 w-14 rounded-full border border-white/20 bg-black/10 transition-transform duration-300 group-hover:scale-110">
-                <Icon className="w-7 h-7 text-white/90 group-hover:text-white transition-colors duration-300" />
+                <Icon className="w-7 h-7 text-white/90 group-hover:text-[#C6FF3A] transition-colors duration-300" />
               </div>
-              <h4 className="text-xl font-semibold text-white mb-2 transition-all duration-300 group-hover:text-purple-300 group-hover:translate-x-1">
+              <h4 className="text-xl font-semibold text-white mb-2 transition-all duration-300 group-hover:text-[#C6FF3A] group-hover:translate-x-1">
                 {service.title}
               </h4>
-              <div className="h-px w-24 bg-white/20 mb-5 transition-all duration-300 group-hover:bg-purple-400/50" />
+              <div className="h-px w-24 bg-white/20 mb-5 transition-all duration-300 group-hover:bg-[#C6FF3A]/50" />
               <p className="text-sm text-zinc-200 leading-relaxed mb-5 transition-all duration-300 group-hover:text-zinc-100 group-hover:translate-y-1">
                 {service.description}
               </p>
@@ -174,9 +174,9 @@ export function Services() {
                 {service.keypoints.map((point, j) => (
                   <li
                     key={j}
-                    className="text-sm text-zinc-100/90 flex items-center gap-2 transition-all duration-300 group-hover:text-purple-200"
+                    className="text-sm text-zinc-100/90 flex items-center gap-2 transition-all duration-300 group-hover:text-[#C6FF3A]"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-white/70 transition-all duration-300 group-hover:bg-purple-400"></span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-white/70 transition-all duration-300 group-hover:bg-[#C6FF3A]"></span>
                     {point}
                   </li>
                 ))}

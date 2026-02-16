@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-int
 const cairo = Cairo({ subsets: ["arabic"], display: "swap", variable: "--font-cairo" })
 
 export const metadata: Metadata = {
-  title: "Growl Agency | 360° Marketing & AI Automation",
+  title: "Growl Agency | 360° Marketing",
   description:
     "Growl Agency specializes in AI automation, brand identity design, web development, and Shopify/WordPress solutions for modern businesses.",
   generator: "v0.app",
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {`
             function updateFavicon() {
               const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              const faviconHref = darkMode ? '/icons/growl-white.svg' : '/icons/growl-dark.svg';
+              const faviconHref = darkMode ? '/icons/growl-n.png' : '/icons/growl-n.png';
               let link = document.querySelector("link[rel~='icon']");
               if (!link) {
                 link = document.createElement('link');
@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Suspense fallback={null}>
           <div className="fixed inset-0 z-0 bg-black">
-            <Plasma color="#8A3FFC" speed={0.8} direction="forward" scale={1.5} opacity={0.3} mouseInteractive={true} />
+            <Plasma color="#C6FF3A" speed={0.8} direction="forward" scale={1.5} opacity={0.3} mouseInteractive={true} />
           </div>
           <div className="relative z-10">
             <LanguageProvider>{children}</LanguageProvider>

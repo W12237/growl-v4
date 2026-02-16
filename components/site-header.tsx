@@ -76,7 +76,6 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  // Updated Calendly URL
   const calendly = "https://calendly.com/awessam311/growl"
   const bookTxt = F("Book a meeting", "احجز اجتماع", "bookMeeting")
 
@@ -94,18 +93,18 @@ export function SiteHeader() {
                 isRTL ? "flex-row-reverse" : ""
               }`}
             >
-              {/* Logo */}
+              {/* Logo - Updated glow to Plasma Green */}
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/icons/lg-c.png"
+                  src="/icons/growl-ww.png"
                   alt="Growl logo"
                   width={80}
                   height={80}
-                  className="h-16 w-16 object-contain drop-shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-transform duration-500 hover:scale-105"
+                  className="h-16 w-16 object-contain drop-shadow-[0_0_20px_rgba(198,255,58,0.5)] transition-transform duration-500 hover:scale-105"
                 />
               </Link>
 
-              {/* Desktop nav */}
+              {/* Desktop nav - Updated text and underline to Primary (Green) */}
               <nav
                 className={`hidden md:flex items-center gap-8 text-sm font-medium text-white/90 ${
                   isRTL ? "flex-row-reverse" : ""
@@ -116,26 +115,26 @@ export function SiteHeader() {
                     key={l.href}
                     href={l.href}
                     onClick={handleAnchor}
-                    className={`relative pb-1 transition-colors duration-300 hover:text-purple-300 ${
-                      activeId === l.href ? "text-purple-300" : ""
+                    className={`relative pb-1 transition-colors duration-300 hover:text-primary ${
+                      activeId === l.href ? "text-primary" : ""
                     }`}
                   >
                     {l.label}
                     <span
-                      className={`absolute left-1/2 -bottom-[2px] h-[2px] w-0 rounded-full bg-purple-400 transition-all duration-300 ease-out ${
-                        activeId === l.href ? "w-6 -translate-x-1/2 opacity-100" : "opacity-0 w-0 -translate-x-1/2"
+                      className={`absolute left-1/2 -bottom-[2px] h-[2px] rounded-full bg-primary transition-all duration-300 ease-out ${
+                        activeId === l.href ? "w-6 -translate-x-1/2 opacity-100 shadow-[0_0_8px_#C6FF3A]" : "opacity-0 w-0 -translate-x-1/2"
                       }`}
                     />
                   </Link>
                 ))}
               </nav>
 
-              {/* Desktop actions */}
+              {/* Desktop actions - Updated Button to Primary (Green) */}
               <div className={`hidden md:flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                 <LanguageToggle />
                 <Button
                   asChild
-                  className="bg-purple-500 text-white font-medium rounded-lg px-6 py-2.5 hover:bg-purple-400 transition-all"
+                  className="bg-primary text-black font-bold rounded-lg px-6 py-2.5 hover:opacity-90 transition-all shadow-[0_0_15px_rgba(198,255,58,0.3)]"
                 >
                   <Link href={calendly} target="_blank" rel="noopener noreferrer">
                     {bookTxt}
@@ -151,21 +150,17 @@ export function SiteHeader() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="border-gray-700 bg-gray-900/80 text-gray-200 hover:bg-gray-800"
+                      className="border-gray-700 bg-gray-900/80 text-gray-200 hover:border-primary hover:text-primary"
                     >
-                      <Menu className="h-5 w-5" />
                       <span className="sr-only">Open menu</span>
+                      <Menu className="h-5 w-5" />
                     </Button>
                   </SheetTrigger>
                   <SheetContent
                     side={isRTL ? "left" : "right"}
                     className="border-gray-800 p-0 w-64 flex flex-col bg-black/70 backdrop-blur-xl"
                   >
-                    <div
-                      className={`flex items-center gap-2 px-4 py-4 border-b border-gray-800 ${
-                        isRTL ? "justify-end" : ""
-                      }`}
-                    >
+                    <div className={`flex items-center gap-2 px-4 py-4 border-b border-gray-800 ${isRTL ? "justify-end" : ""}`}>
                       <Image src="/icons/lg-c.png" alt="Growl logo" width={28} height={28} className="h-7 w-7" />
                     </div>
 
@@ -175,8 +170,8 @@ export function SiteHeader() {
                           key={l.href}
                           href={l.href}
                           onClick={handleAnchor}
-                          className={`px-4 py-3 hover:bg-gray-900 hover:text-purple-300 transition-colors ${
-                            activeId === l.href ? "text-purple-300" : ""
+                          className={`px-4 py-3 hover:bg-gray-900 hover:text-primary transition-colors ${
+                            activeId === l.href ? "text-primary" : ""
                           }`}
                         >
                           {l.label}
@@ -187,7 +182,7 @@ export function SiteHeader() {
                     <div className="mt-auto border-t border-gray-800 p-4">
                       <Button
                         asChild
-                        className="w-full bg-purple-500 text-white font-medium rounded-lg px-6 py-2.5 hover:bg-purple-400 transition-all"
+                        className="w-full bg-primary text-black font-bold rounded-lg px-6 py-2.5 hover:opacity-90 transition-all"
                       >
                         <Link href={calendly} target="_blank" rel="noopener noreferrer">
                           {bookTxt}

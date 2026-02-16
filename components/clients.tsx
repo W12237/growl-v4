@@ -36,7 +36,7 @@ export function Clients() {
               key={`l1-${i}`}
               className="mx-3 px-5 py-3 rounded-lg border border-white/10 bg-transparent
                          text-gray-300 text-sm font-semibold transition-all duration-200
-                         hover:text-purple-300 hover:border-purple-400/50"
+                         hover:text-[#C6FF3A] hover:border-[#C6FF3A]/50 hover:bg-[#C6FF3A]/5"
             >
               {name}
             </div>
@@ -52,7 +52,7 @@ export function Clients() {
               key={`l2-${i}`}
               className="mx-3 px-5 py-3 rounded-lg border border-white/10 bg-transparent
                          text-gray-300 text-sm font-semibold transition-all duration-200
-                         hover:text-purple-300 hover:border-purple-400/50"
+                         hover:text-[#C6FF3A] hover:border-[#C6FF3A]/50 hover:bg-[#C6FF3A]/5"
             >
               {name}
             </div>

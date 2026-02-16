@@ -25,21 +25,19 @@ export function Hero() {
         {/* Logo + Tagline */}
         <div className="mb-10 flex flex-col items-center gap-4">
           <Image
-            src="/icons/lg-c.png"
+            src="/icons/growl-n.png"
             alt="Growl Logo"
-            width={5000}
+            width={500}
             height={200}
-            className="opacity-90 drop-shadow-[0_0_25px_rgba(168,85,247,0.25)]"
+            className="opacity-90 drop-shadow-[0_0_25px_rgba(198,255,58,0.3)]"
           />
-          {/* <p className="text-sm uppercase tracking-[0.25em] text-purple-300/80">
-            {t.heroTagline ?? "Empowering Brands with Smart Innovation"}
-          </p> */}
         </div>
-<h1 className="mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white text-center">
-  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-400">
-    {t.heroHeadline2 ?? (isRTL ? "حلولاً رقمية ذكية لعصرٍ حديث" : "Intelligent Digital Solutions for the Modern World")}
-  </span>
-</h1>
+        
+        <h1 className="mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white text-center">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#C6FF3A] via-[#DFFF8A] to-[#EFFFBC]">
+            {t.heroHeadline2 ?? (isRTL ? "حلولاً رقمية ذكية لعصرٍ حديث" : "Intelligent Digital Solutions for the Modern World")}
+          </span>
+        </h1>
 
         {/* Caption */}
         <p className="mx-auto mt-6 max-w-3xl text-base sm:text-lg text-gray-300 leading-relaxed">
@@ -50,9 +48,9 @@ export function Hero() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button
             asChild
-            className="rounded-full bg-purple-500 hover:bg-purple-400 text-white font-semibold px-8 py-5 text-sm tracking-wide transition-all"
+            className="rounded-full bg-[#C6FF3A] hover:bg-[#DFFF8A] text-black font-bold px-8 py-5 text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(198,255,58,0.3)]"
           >
-            <a href="https://wa.link/65mf3i" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/201024252649" target="_blank" rel="noopener noreferrer">
               {t.chatWithUs ?? (isRTL ? "تواصل معنا" : "Chat with Us")}
             </a>
           </Button>
@@ -60,7 +58,7 @@ export function Hero() {
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-purple-400/40 text-purple-200 hover:bg-purple-400/10 hover:text-white px-8 py-5 text-sm font-medium transition-all"
+            className="rounded-full border-[#C6FF3A]/40 text-[#C6FF3A] hover:bg-[#C6FF3A]/10 hover:text-white px-8 py-5 text-sm font-medium transition-all"
           >
             <a href="#services">{t.exploreServices ?? (isRTL ? "استكشف خدماتنا" : "Explore Services")}</a>
           </Button>
@@ -91,7 +89,7 @@ function PhoneCard({
   videoSrc?: string
 }) {
   return (
-    <div className="group relative rounded-[28px] border border-white/10 bg-white/5 p-2 transition-all duration-300 hover:border-purple-400/40 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)] hover:-translate-y-1">
+    <div className="group relative rounded-[28px] border border-white/10 bg-white/5 p-2 transition-all duration-300 hover:border-[#C6FF3A]/40 hover:shadow-[0_0_25px_rgba(198,255,58,0.25)] hover:-translate-y-1">
       <div className="relative aspect-[9/19] overflow-hidden rounded-2xl bg-black">
         <LazyVideo
           src={videoSrc}
@@ -105,7 +103,7 @@ function PhoneCard({
         <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent p-4">
           <h3 className="text-lg font-semibold text-white">{title}</h3>
           <p className="mt-1 text-xs text-gray-300">{sub}</p>
-          <div className="mt-2 inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-[10px] uppercase tracking-wide text-purple-300">
+          <div className="mt-2 inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-[10px] uppercase tracking-wide text-[#C6FF3A]">
             {tone}
           </div>
         </div>

@@ -64,7 +64,7 @@ export function Team() {
         {team.map((m, i) => (
           <Card
             key={i}
-            className="group border border-white/10 bg-transparent rounded-2xl transition-all duration-300 hover:border-purple-400/50 hover:shadow-[0_0_22px_rgba(138,63,252,0.25)] hover:-translate-y-1"
+            className="group border border-white/10 bg-transparent rounded-2xl transition-all duration-300 hover:border-[#C6FF3A]/50 hover:shadow-[0_0_22px_rgba(198,255,58,0.2)] hover:-translate-y-1"
           >
             {/* Avatar */}
             <CardHeader className="p-0">
@@ -76,7 +76,7 @@ export function Team() {
                     fill
                     priority={i < 2}
                     sizes="(max-width:768px) 50vw, (max-width:1200px) 25vw, 15vw"
-                    className="object-contain"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </div>
@@ -84,8 +84,10 @@ export function Team() {
 
             {/* Content */}
             <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-white">{m.name}</h3>
-              <p className="mt-1 text-sm text-purple-300">{m.role}</p>
+              <h3 className="text-lg font-semibold text-white group-hover:text-[#C6FF3A] transition-colors">
+                {m.name}
+              </h3>
+              <p className="mt-1 text-sm font-medium text-[#C6FF3A]/80">{m.role}</p>
 
               <div className="mt-6 flex justify-center gap-3">
                 {m.linkedin && (
@@ -94,7 +96,7 @@ export function Team() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${m.name} on LinkedIn`}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-300 hover:border-purple-400/40 hover:text-purple-300 transition-colors"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-300 hover:border-[#C6FF3A]/40 hover:text-[#C6FF3A] transition-all hover:bg-[#C6FF3A]/5"
                   >
                     <Linkedin className="h-4 w-4" />
                   </a>
@@ -102,7 +104,7 @@ export function Team() {
                 <a
                   href={m.email}
                   aria-label={`Email ${m.name}`}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-300 hover:border-purple-400/40 hover:text-purple-300 transition-colors"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-gray-300 hover:border-[#C6FF3A]/40 hover:text-[#C6FF3A] transition-all hover:bg-[#C6FF3A]/5"
                 >
                   <Mail className="h-4 w-4" />
                 </a>

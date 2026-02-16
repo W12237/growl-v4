@@ -84,44 +84,46 @@ export function Process() {
           <Card
             key={i}
             className="group relative border border-white/10 bg-transparent rounded-2xl p-8
-                       hover:border-purple-400/50 hover:shadow-[0_0_25px_rgba(138,63,252,0.25)]
-                       transition-all duration-300 hover:-translate-y-2"
+                       hover:border-[#C6FF3A]/50 hover:shadow-[0_0_25px_rgba(198,255,58,0.2)]
+                       transition-all duration-300 hover:-translate-y-2 overflow-hidden"
           >
-            <CardHeader className="space-y-4">
+            <CardHeader className="space-y-4 p-0 mb-6">
               {/* Step Number */}
-              <span className="block text-sm font-semibold text-purple-400/70 tracking-widest">
+              <span className="block text-sm font-bold text-[#C6FF3A] tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
                 STEP {step.number}
               </span>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold text-white leading-tight group-hover:text-purple-300 transition-colors">
+              <h3 className="text-2xl font-semibold text-white leading-tight group-hover:text-[#C6FF3A] transition-colors">
                 {step.title}
               </h3>
 
               {/* Divider */}
-              <div className="h-px bg-white/10 group-hover:bg-purple-400/40 transition-all duration-300"></div>
+              <div className="h-px bg-white/10 group-hover:bg-[#C6FF3A]/40 transition-all duration-300"></div>
             </CardHeader>
 
-            <CardContent className="space-y-5">
+            <CardContent className="space-y-5 p-0">
               {/* Description */}
-              <p className="text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
                 {step.description}
               </p>
 
-              {/* Deliverables */}
-              <div>
-                <p className="text-xs font-semibold text-purple-300 uppercase tracking-wide mb-1">
-                  Deliverables
-                </p>
-                <p className="text-xs text-gray-400">{step.deliverables}</p>
-              </div>
+              <div className="space-y-4 pt-2">
+                {/* Deliverables */}
+                <div>
+                  <p className="text-[10px] font-bold text-[#C6FF3A] uppercase tracking-wider mb-1 opacity-90">
+                    Deliverables
+                  </p>
+                  <p className="text-xs text-gray-400 group-hover:text-gray-300">{step.deliverables}</p>
+                </div>
 
-              {/* KPI */}
-              <div>
-                <p className="text-xs font-semibold text-purple-300 uppercase tracking-wide mb-1">
-                  KPI
-                </p>
-                <p className="text-xs text-gray-400">{step.kpi}</p>
+                {/* KPI */}
+                <div>
+                  <p className="text-[10px] font-bold text-[#C6FF3A] uppercase tracking-wider mb-1 opacity-90">
+                    KPI
+                  </p>
+                  <p className="text-xs text-gray-400 group-hover:text-gray-300">{step.kpi}</p>
+                </div>
               </div>
             </CardContent>
           </Card>

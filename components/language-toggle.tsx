@@ -14,7 +14,7 @@ export function LanguageToggle() {
         <Button
           variant="outline"
           size="icon"
-          className="border-gray-700 bg-gray-900/80 text-gray-200 hover:bg-gray-800 hover:text-purple-300"
+          className="border-gray-700 bg-gray-900/80 text-gray-200 hover:bg-gray-800 hover:text-[#C6FF3A] hover:border-[#C6FF3A]/40 transition-colors"
         >
           <Globe className="h-4 w-4" />
           <span className="sr-only">Change language</span>
@@ -23,13 +23,17 @@ export function LanguageToggle() {
       <DropdownMenuContent align="end" className="bg-gray-950/95 border-gray-800">
         <DropdownMenuItem
           onClick={() => setLanguage("en")}
-          className={`cursor-pointer ${language === "en" ? "bg-purple-300/20 text-purple-300" : "text-gray-200"}`}
+          className={`cursor-pointer transition-colors ${
+            language === "en" ? "bg-[#C6FF3A]/10 text-[#C6FF3A]" : "text-gray-200 hover:text-[#C6FF3A]"
+          }`}
         >
           English
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setLanguage("ar")}
-          className={`cursor-pointer ${language === "ar" ? "bg-purple-300/20 text-purple-300" : "text-gray-200"}`}
+          className={`cursor-pointer transition-colors ${
+            language === "ar" ? "bg-[#C6FF3A]/10 text-[#C6FF3A]" : "text-gray-200 hover:text-[#C6FF3A]"
+          }`}
         >
           العربية
         </DropdownMenuItem>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
 
-const ACCENT = "#8a3ffc"
+const ACCENT = "#C6FF3A"
 
 function FeatureItem({ text, muted = false }: { text: string; muted?: boolean }) {
   return (
@@ -75,49 +75,62 @@ export function Pricing() {
   return (
     <section id="pricing" className="container mx-auto px-4 py-16 sm:py-24">
       <div className="mb-12 text-center">
-        <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">{t.pricingTitle}</h2>
-        <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">{t.pricingSubtitle}</p>
+        <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          {t.pricingTitle}
+        </h2>
+        <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+          {t.pricingSubtitle}
+        </p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-3">
         {plans.map((plan, index) => (
           <div key={index} className="group animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
             <Card
-              className={`relative overflow-hidden rounded-2xl transition-all duration-300 h-full group-hover:scale-105 ${
+              className={`relative overflow-hidden rounded-2xl transition-all duration-500 h-full group-hover:-translate-y-2 ${
                 plan.highlighted
-                  ? "liquid-glass-enhanced border-purple-400/50 shadow-[0_0_40px_rgba(168,85,247,0.2)]"
-                  : "liquid-glass border-white/20 hover:border-white/40"
+                  ? "bg-white/[0.03] border-[#C6FF3A]/50 shadow-[0_0_40px_rgba(198,255,58,0.15)]"
+                  : "bg-white/[0.02] border-white/10 hover:border-[#C6FF3A]/30"
               }`}
             >
               {plan.highlighted && (
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-purple-600" />
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#C6FF3A] via-[#DFFF8A] to-[#C6FF3A]" />
               )}
+              
               {plan.badge && (
-                <div className="absolute top-4 right-4 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold text-purple-300 bg-purple-500/20 border border-purple-400/50">
+                <div className="absolute top-6 right-6 inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-black bg-[#C6FF3A] shadow-[0_0_15px_rgba(198,255,58,0.4)]">
                   {plan.badge}
                 </div>
               )}
-              <CardHeader className="space-y-3 pb-4">
-                <div className="text-sm font-semibold text-purple-300">{plan.name}</div>
-                <div className="flex items-end gap-2 text-white">
-                  <div className="text-4xl font-bold tracking-tight">{plan.price}</div>
+
+              <CardHeader className="space-y-3 pb-6 pt-8">
+                <div className="text-sm font-bold uppercase tracking-widest text-[#C6FF3A]">
+                  {plan.name}
                 </div>
-                <p className="text-sm text-gray-400">{plan.description}</p>
+                <div className="flex items-end gap-1 text-white">
+                  <div className="text-5xl font-extrabold tracking-tighter">{plan.price}</div>
+                  {plan.price.includes("$") && <span className="mb-1.5 text-gray-400 text-sm">/start</span>}
+                </div>
+                <p className="text-sm text-gray-400 leading-relaxed">{plan.description}</p>
+              </CardHeader>
+
+              <CardContent className="space-y-6">
                 <Button
                   asChild
-                  className={`w-full rounded-lg font-medium transition-all duration-300 ${
+                  className={`w-full rounded-xl font-bold py-6 transition-all duration-300 ${
                     plan.highlighted
-                      ? "bg-purple-500 text-white hover:bg-purple-600"
-                      : "bg-white/10 text-white hover:bg-white/20 border border-white/20"
+                      ? "bg-[#C6FF3A] text-black hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                      : "bg-white/10 text-white hover:bg-[#C6FF3A] hover:text-black border border-white/10"
                   }`}
                 >
                   <Link href="https://wa.link/65mf3i" target="_blank" rel="noopener noreferrer">
                     {t.contactNow}
                   </Link>
                 </Button>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <ul className="grid gap-3">
+
+                <div className="h-px bg-white/10" />
+
+                <ul className="grid gap-4">
                   {plan.features.map((feature, idx) => (
                     <FeatureItem key={idx} text={feature} />
                   ))}
@@ -129,23 +142,18 @@ export function Pricing() {
         ))}
       </div>
 
-      <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-center">
-        <div className="text-sm text-gray-400">
-          <p className="font-semibold text-white mb-1">Bilingual Support</p>
-          <p>{t.pricingNote1}</p>
-        </div>
-        <div className="text-sm text-gray-400">
-          <p className="font-semibold text-white mb-1">Delivery Timeline</p>
-          <p>{t.pricingNote2}</p>
-        </div>
-        <div className="text-sm text-gray-400">
-          <p className="font-semibold text-white mb-1">Hosting & Domain</p>
-          <p>{t.pricingNote3}</p>
-        </div>
-        <div className="text-sm text-gray-400">
-          <p className="font-semibold text-white mb-1">Pricing</p>
-          <p>{t.pricingNote4}</p>
-        </div>
+      <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {[
+          { label: "Bilingual Support", desc: t.pricingNote1 },
+          { label: "Delivery Timeline", desc: t.pricingNote2 },
+          { label: "Hosting Domain", desc: t.pricingNote3 },
+          { label: "Pricing", desc: t.pricingNote4 },
+        ].map((note, i) => (
+          <div key={i} className="p-4 rounded-xl border border-white/5 bg-white/[0.01] text-center">
+            <p className="font-bold text-[#C6FF3A] text-xs uppercase tracking-widest mb-2">{note.label}</p>
+            <p className="text-sm text-gray-400 leading-snug">{note.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   )
