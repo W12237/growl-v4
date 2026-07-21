@@ -49,25 +49,25 @@ const teamMembers = [
   {
     name: "Mohamed Rabie",
     roleKey: "CEO",
-    image: "https://www.growl.cloud/icons/re3o.webp",
+    image: "/images/re3o.webp",
     glowColor: "group-hover:bg-[#b6ff2e]/5",
   },
   {
     name: "Wessam Ali",
     roleKey: "CTO",
-    image: "https://www.growl.cloud/icons/wessam.webp",
+    image: "/images/wessam.webp",
     glowColor: "group-hover:bg-[#a78bfa]/5",
   },
   {
     name: "Mohamed Alaa",
     roleKey: "COO",
-    image: "https://www.growl.cloud/icons/b4b4.webp",
+    image: "/images/b4b4.webp",
     glowColor: "group-hover:bg-[#b6ff2e]/5",
   },
   {
     name: "Menna Hossam",
     roleKey: "Operations Manager",
-    image: "https://www.growl.cloud/icons/mena.webp",
+    image: "/images/mena.webp",
     glowColor: "group-hover:bg-[#a78bfa]/5",
   },
 ]
