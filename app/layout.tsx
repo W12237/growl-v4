@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growl Agency | Digital Solutions, Strategy & Growth",
+    title: "owl Agency | Digital Solutions, Strategy & Growth",
     description:
       "Engineering high-performance technical frameworks, scalable growth systems, and elite brand transformations.",
     images: ["/images/grwol-logo-bg.png"],
