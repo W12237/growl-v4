@@ -18,11 +18,56 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Growl Agency",
+    default: "Growl Agency | Digital Solutions, Strategy & Growth",
     template: "%s | Growl Agency",
   },
   description:
-    "Growl Agency creates intelligent digital solutions through strategy, design, technology, and automation.",
+    "Growl Agency is a premier full-service marketing and tech agency engineering intelligent digital solutions, high-performance web platforms, Shopify integrations, and automated growth systems.",
+  keywords: [
+    "Growl Agency",
+    "Digital Marketing Agency",
+    "Web Development",
+    "Shopify Integration",
+    "Automation Workflows",
+    "Brand Transformation",
+    "Software Solutions",
+  ],
+  authors: [{ name: "Growl Agency" }],
+  creator: "Growl Agency",
+  publisher: "Growl Agency",
+  metadataBase: new URL("https://www.growl.cloud"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.growl.cloud",
+    title: "Growl Agency | Digital Solutions, Strategy & Growth",
+    description:
+      "Engineering high-performance technical frameworks, scalable growth systems, and elite brand transformations.",
+    siteName: "Growl Agency",
+    images: [
+      {
+        url: "/grwol-logo-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "Growl Agency Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Growl Agency | Digital Solutions, Strategy & Growth",
+    description:
+      "Engineering high-performance technical frameworks, scalable growth systems, and elite brand transformations.",
+    images: ["/grwol-logo-bg.png"],
+  },
+  icons: {
+    icon: "/grwol-logo-bg.png",
+    shortcut: "/grwol-logo-bg.png",
+    apple: "/grwol-logo-bg.png",
+  },
 }
 
 export default function RootLayout({
