@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Growl Agency",
     images: [
       {
-        url: "/grwol-logo-bg.png",
+        url: "/images/grwol-logo-bg.png",
         width: 1200,
         height: 630,
         alt: "Growl Agency Logo",
@@ -61,12 +61,12 @@ export const metadata: Metadata = {
     title: "Growl Agency | Digital Solutions, Strategy & Growth",
     description:
       "Engineering high-performance technical frameworks, scalable growth systems, and elite brand transformations.",
-    images: ["/grwol-logo-bg.png"],
+    images: ["/images/grwol-logo-bg.png"],
   },
   icons: {
-    icon: "/grwol-logo-bg.png",
-    shortcut: "/grwol-logo-bg.png",
-    apple: "/grwol-logo-bg.png",
+    icon: "/images/grwol-logo-bg.png",
+    shortcut: "/images/grwol-logo-bg.png",
+    apple: "/images/grwol-logo-bg.png",
   },
 }
 
