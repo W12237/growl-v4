@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.growl.cloud",
-    title: "Growl Agency | Digital Solutions, Strategy & Growth",
+    title: "rowl Agency | Digital Solutions, Strategy & Growth",
     description:
       "Engineering high-performance technical frameworks, scalable growth systems, and elite brand transformations.",
     siteName: "Growl Agency",
